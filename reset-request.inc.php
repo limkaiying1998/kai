@@ -51,6 +51,16 @@
 		  $headers .= "Content-type: text/html\r\n";
 
 		  mail($to, $subject, $message, $headers);
+		
+		
+	if(mail($to, $subject, $message, $headers)) 
+	{
+		$msg = "Mail sent OK";
+	} 
+	else 
+	{
+ 	   $msg = "Error sending email!";
+	}
 
 
 	} else{
