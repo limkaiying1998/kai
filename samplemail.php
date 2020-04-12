@@ -36,6 +36,7 @@ if(isset($_POST['submit']))
 	else 
 	{
  	   $msg = "Error sending email!";
+		print phpinfo();  
 	}
 }
 ?>
