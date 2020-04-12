@@ -1,6 +1,6 @@
 <?php
 	if(isset($_POST["reset-request-submit"])){
-		$msg="";
+
 		$selector = bin2hex(random_bytes(8));
 		$token = random_bytes(32);
 
@@ -55,11 +55,12 @@
 		
 	if(mail($to, $subject, $message, $headers)) 
 	{
-		$msg = "Mail sent OK";
+		echo "mail sent";
+		header("Location: ../reset-password.php?reset=success");
 	} 
 	else 
 	{
- 	   $msg = "Error sending email!";
+ 	   echo "mail fail to sent";
 	}
 
 
