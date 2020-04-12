@@ -50,14 +50,7 @@
 		  $headers .= "Reply-To: limkaiying98@gmail.com\r\n";
 		  $headers .= "Content-type: text/html\r\n";
 
-		    $headers = "From: mmtuts <usemmtuts@gmail.com>\r\n";
- 			$headers .= "Reply-To: usemmtuts@gmail.com\r\n";
-  			$headers .= "Content-type: text/html\r\n";
-
 		  mail($to, $subject, $message, $headers);
-
-		  header("Location:./reset-password.php?reset=success");
-
 
 
 	} else{
