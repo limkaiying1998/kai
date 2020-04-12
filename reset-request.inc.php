@@ -51,19 +51,8 @@
 		  $headers .= "Content-type: text/html\r\n";
 
 		  mail($to, $subject, $message, $headers);
-		
-		
-	if(mail($to, $subject, $message, $headers)) 
-	{
-		echo "mail sent";
-		header("Location: ../reset-password.php?reset=success");
-	} 
-	else 
-	{
- 	   echo "mail fail to sent";
-	}
 
-
+		  header("Location:./reset-password.php?reset=success");
 	} else{
 		header("Location:./index.php");
 	}
