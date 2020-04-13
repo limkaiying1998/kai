@@ -25,8 +25,8 @@
 									<h3>Navigation</h3>
 									<ul class="alt">
 										<li><a href="index.html">Home</a></li>
-										<li><a href="index.html#one">About Us</a></li>
-										<li><a href="index.html#two">Events</a></li>
+										<li><a href="index.php#one">About Us</a></li>
+										<li><a href="viewpost.php">Events</a></li>
 									</ul>
 								</div>
 								
