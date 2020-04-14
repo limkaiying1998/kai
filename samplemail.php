@@ -8,7 +8,7 @@ $msg="";
 if(isset($_POST['submit']))
 {
 	if(isset($_POST['SUBMIT'])){
-		require 'phpmaler/PHPMailerAutoload.php';
+		require 'phpmailer/PHPMailerAutoload.php';
 		$mail = new PHPMailer;
 
 		$mail->Host = 'smtp.gmail.com';
