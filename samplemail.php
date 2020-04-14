@@ -7,36 +7,30 @@ If this does not work, then the PHP email configuration is bad!
 $msg="";
 if(isset($_POST['submit']))
 {
-    /* ****Important!****
-    replace name@your-web-site.com below 
-    with an email address that belongs to 
-    the website where the script is uploaded.
-    For example, if you are uploading this script to
-    www.my-web-site.com, then an email like
-    form@my-web-site.com is good.
-    */
+	if(isset($_POST['SUBMIT'])){
+		require 'phpmaler/PHPMailerAutoload.php';
+		$mail = new PHPMailer;
 
-	$from_add = "limkaiying98@gmail.com"; 
+		$mail->Host = 'smtp.gmail.com';
+		$mail->Port = 587;
+		$mail->isSMTP();
+		$mail->SMTPAuth = true;
+		$mail->SMTPSecure = 'tls';
 
-	$to_add = "limkaiying98@icloud.com"; //<-- put your yahoo/gmail email address here
+		$mail->Username = 'spw19159323@gmail.com';
+		$mail->Password = 'kaiying98';
+		$mail->SetFrom('spw19159323@gmail.com');
+		$mail->isHTML(true);
+		$mail->Subject = "Hello World";
+		$mail->Body = 'A test email!';
+		$mail->AddAddress('limkaiying98@gmail.com');
 
-	$subject = "Test Subject";
-	$message = "Test Message";
-	
-	$headers = "From: $from_add \r\n";
-	$headers .= "Reply-To: $from_add \r\n";
-	$headers .= "Return-Path: $from_add\r\n";
-	$headers .= "X-Mailer: PHP \r\n";
-	
-	
-	if(mail($to_add,$subject,$message,$headers)) 
-	{
-		$msg = "Mail sent OK";
-	} 
-	else 
-	{
- 	   $msg = "Error sending email!";
-		print phpinfo();  
+		if(!$mail->send()){
+			echo 'fail';
+		}
+		else{
+			echo'success';
+		}
 	}
 }
 ?>
