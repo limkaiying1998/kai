@@ -41,17 +41,7 @@
 					<label for="confirm_password" class="floatLabel">Confirm Password</label>
 					<input id="confirm_password" name="confirm_password" type="password" required="required" placeholder="repeat password">
 				</p>
-				<p>
-					<?php
-				          if (isset($_GET["newpwd"])) {
-				            if ($_GET["newpwd"] == "passwordupdated") {
-				              echo '<p>Your password has been reset!</p>';
-				            }
-				          }
-          			?>
-					<a href="reset-password.php">Forgot your password?</a>
-				</p>
-				<p>
+			
 					<input type="submit" name="register-submit" value="Create My Account" id="submit">
 				</p>
 			</form>
