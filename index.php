@@ -13,7 +13,7 @@
 						{
 							echo "Welcome  " . $_SESSION['usnname'];
 							echo '<ul class="actions">';
-							echo '<li><a href="#two" class="button big alt">Our Posts</a></li>';
+							echo '<li><a href="viewpost.php" class="button big alt">Our Posts</a></li>';
 						}
 						else
 						{
