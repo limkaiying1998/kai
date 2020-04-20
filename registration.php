@@ -16,6 +16,10 @@
 		  			echo'<p style="color:red">Username has been taken!</p>';
 		  		}
 		  	}
+			else if($_GET["registration"] == "success"){
+		  			echo'<p style="color:blue">Account created successfully proceed to login page!</p>';
+
+		  		}
 		  ?>
 		  		<p>
 					<label for="usn" class="floatLabel">Username</label>
